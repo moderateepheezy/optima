@@ -50,7 +50,6 @@ public class StatsFragment extends Fragment {
     private ListView listView;
     private List<StatEntry> statList;
     private ProgressBar progressBar;
-    String line;
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -90,23 +89,6 @@ public class StatsFragment extends Fragment {
 
     }
 
-    public String getCPUUsage(int pid) {
-        Process p;
-        try {
-            String[] cmd = {
-                    "sh",
-                    "-c",
-                    "top -m 1000 -d 1 -n 1 | grep \"" + pid + "\" "};
-            p = Runtime.getRuntime().exec(cmd);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(
-                    p.getInputStream()));
-             line = reader.readLine();
-            // line contains the process info
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return line;
-    }
 
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved) {

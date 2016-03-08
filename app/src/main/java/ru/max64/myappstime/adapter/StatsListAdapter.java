@@ -1,5 +1,6 @@
 package ru.max64.myappstime.adapter;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +20,9 @@ import ru.max64.myappstime.model.StatEntry;
 import ru.max64.myappstime.util.DateTimeUtils;
 
 public class StatsListAdapter extends BaseAdapter {
+
+    String line;
+    String packagename;
 
     private Context context;
     private LayoutInflater inflater;
@@ -50,6 +57,7 @@ public class StatsListAdapter extends BaseAdapter {
         }
 
         StatEntry se = getStatEntry(position);
+        packagename = se.getPackageName();
         ((ImageView) convertView.findViewById(R.id.stats_icon)).setImageDrawable(se.getIcon());
 
         TextView tvTitle = (TextView) convertView.findViewById(R.id.stats_title);
@@ -58,12 +66,46 @@ public class StatsListAdapter extends BaseAdapter {
         String time = Integer.toString(se.getTime());
         TextView tvTime = (TextView) convertView.findViewById(R.id.stats_time);
         tvTime.setText(DateTimeUtils.secondsToTime(time, context));
+        TextView cpu = (TextView) convertView.findViewById(R.id.cpu);
+        cpu.setText(getCPUUsage(setPidNo()));
 
         return convertView;
     }
 
     public StatEntry getStatEntry(int position) {
         return ((StatEntry) getItem(position));
+    }
+
+    public int setPidNo(){
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> pids = am.getRunningAppProcesses();
+        int processid = 0;
+        for (int i = 0; i < pids.size(); i++) {
+            ActivityManager.RunningAppProcessInfo info = pids.get(i);
+            if (info.processName.equalsIgnoreCase(packagename)) {
+                processid = info.pid;
+            }
+        }
+
+        return processid;
+    }
+
+    public String getCPUUsage(int pid) {
+        Process p;
+        try {
+            String[] cmd = {
+                    "sh",
+                    "-c",
+                    "top -m 1000 -d 1 -n 1 | grep \"" + pid + "\" "};
+            p = Runtime.getRuntime().exec(cmd);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    p.getInputStream()));
+            line = reader.readLine();
+            // line contains the process info
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return line;
     }
 
 }
