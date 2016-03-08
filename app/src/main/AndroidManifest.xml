@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="internalOnly"
+    package="ru.max64.myappstime" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
+
+    <application
+        android:name=".Utilities.UsageApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        MainActivity
+        <activity
+            android:name="ru.max64.myappstime.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="ru.max64.myappstime.DetailsActivity" />
+        <receiver android:name=".Receivers.RebootReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+        </intent-filter>
+    </receiver>
+
+        <receiver android:name=".Receivers.ManageDataReceiver"></receiver>
+
+        <receiver android:name=".Receivers.CheckFutileAppsReceiver"></receiver>
+
+        <service
+            android:name=".Service.ProcessDataUpdateService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+        <service
+            android:name=".Service.CheckForegroundAppService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name=".Activities.AppUsagePatternActivity"
+            android:label="@string/title_activity_app_usage_pattern"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Activities.MemoryUsageActivity"
+            android:label="@string/title_activity_memory_usage"
+            android:theme="@style/NoActionBar">
+        </activity>
+        <activity
+            android:name=".Activities.SingleAppUsageInfoActivity"
+            android:label="@string/title_activity_single_app_usage_info"
+            android:theme="@style/NoActionBar">
+        </activity>
+
+        <service
+            android:name=".Service.ManageDataIntentService"
+            android:exported="false">
+        </service>
+
+        <service android:name="ru.max64.myappstime.service.UsageService" />
+
+        <receiver android:name="ru.max64.myappstime.receiver.PhoneBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="ru.max64.myappstime.receiver.ScreenStatusReceiver" />
+    </application>
+
+</manifest>

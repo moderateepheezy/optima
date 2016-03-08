@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sort_by_string_array">
+        <item>Название \u2191</item>
+        <item>Название \u2193</item>
+        <item>Дата установки \u2191</item>
+        <item>Дата установки \u2193</item>
+        <item>Посл. обновление \u2191</item>
+        <item>Посл. обновление \u2193</item>
+    </string-array>
+
+</resources>

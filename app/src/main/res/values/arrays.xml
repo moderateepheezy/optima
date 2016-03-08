@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sort_by_string_array">
+        <item>name \u2191</item>
+        <item>name \u2193</item>
+        <item>install date \u2191</item>
+        <item>install date \u2193</item>
+        <item>last update \u2191</item>
+        <item>last update \u2193</item>
+    </string-array>
+
+</resources>

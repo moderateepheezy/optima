@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/stats_tv_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:text="Period"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/stats_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_tv_period"
+        tools:listitem="@layout/row_stats" />
+
+    <ProgressBar
+        android:id="@+id/stats_progress_bar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

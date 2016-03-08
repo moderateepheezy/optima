@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="top_menu_share">Поделиться</string>
+    <string name="top_head">ТОП 3 ПРИЛОЖЕНИЙ ЗА НЕДЕЛЮ</string>
+    <string name="top_time">Время за неделю</string>
+    <string name="top_share_header">ТОП 3 моих самых используемых приложений:\n</string>
+
+    <string name="menu_select_period">Выбрать период</string>
+    <string name="menu_search">Поиск</string>
+
+    <string name="stats_select_dates">Выберите начальную и конечную даты</string>
+    <string name="stats_day">Сегодня</string>
+    <string name="stats_yesterday">Вчера</string>
+    <string name="stats_week">За неделю</string>
+    <string name="stats_year">За год</string>
+
+    <string name="enable_usage_permission">Включите разрешение для My Apps Time и нажмите назад</string>
+
+    <string name="from">с</string>
+    <string name="to">по</string>
+
+    <string name="hours">ч</string>
+    <string name="minutes">мин</string>
+    <string name="seconds">с</string>
+
+    <string name="installed_menu_search_hint">Введите название приложения</string>
+    <string name="installed_spinner_sort">Сортировать по</string>
+    <string name="installed_include_system">Отображать системные приложения</string>
+    <string name="installed_cannot_be_launched">Приложение не может быть запущено</string>
+
+    <string name="choose_action">Выберите действие</string>
+    <string name="launch">Запустить</string>
+    <string name="details">Информация</string>
+    <string name="system_menu">Системное меню</string>
+    <string name="uninstall">Удалить</string>
+
+</resources>

@@ -1,0 +1,68 @@
+<resources>
+
+    <string name="app_name">My Apps Usage</string>
+
+    <string name="tab_top">TOP</string>
+    <string name="tab_stats">STATS</string>
+    <string name="tab_installed">INSTALLED</string>
+
+    <string name="top_menu_share">Share</string>
+    <string name="top_head">TOP 3 APPS FOR WEEK</string>
+    <string name="top_time">Week time</string>
+    <string name="top_share_header">TOP 3 of my most used apps:\n</string>
+
+    <string name="menu_select_period">Select period</string>
+    <string name="menu_search">Search</string>
+
+    <string name="stats_select_dates">Select start and end date</string>
+    <string name="stats_day">Today</string>
+    <string name="stats_yesterday">Yesterday</string>
+    <string name="stats_week">For week</string>
+    <string name="stats_year">For year</string>
+
+    <string name="enable_usage_permission">Enable permission for My Apps Time and press back</string>
+
+    <string name="from">from</string>
+    <string name="to">to</string>
+
+    <string name="hours">h</string>
+    <string name="minutes">min</string>
+    <string name="seconds">sec</string>
+
+    <string name="installed_menu_search_hint">Type app name</string>
+    <string name="installed_spinner_sort">Sort by</string>
+    <string name="installed_include_system">Include system apps</string>
+    <string name="installed_cannot_be_launched">Application can not be launched</string>
+
+    <string name="choose_action">Choose action</string>
+    <string name="launch">Launch</string>
+    <string name="details">Details</string>
+    <string name="system_menu">System menu</string>
+    <string name="uninstall">Uninstall</string>
+
+
+    <string name="loading">Loading</string>
+    <string name="please_wait">Please Wait ...</string>
+    <string name="open_app_usage_activity">App usage pattern</string>
+    <string name="title_activity_app_usage_pattern">Usage Pattern</string>
+    <string name="no_used_app_found">No apps found ... \nSpend some time with your device, open some apps while we prepare your analytics for you.</string>
+    <string name="open_most_used_apps">Show most used apps</string>
+    <string name="open_battery_usage_activity">Show battery usage</string>
+
+
+    <color name="app_theme_blue">#4682B4</color>
+    <string name="title_activity_memory_usage">MemoryUsageActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_app_usage">Your App Usage</string>
+    <string name="title_activity_single_app_usage_info">SingleAppUsageInfoActivity</string>
+    <string name="open_futile_apps">Show apps not used in a while</string>
+    <string name="no_unused_app_found">Woah, no apps found that you have not used in a while.\nYou do use all your apps !</string>
+    <string name="openDrawer">Opened</string>
+    <string name="closeDrawer">Close</string>
+    <string name="rate_app">Rate app</string>
+    <string name="open_memory_usage">Show memory usage</string>
+    <string name="couldnt_launch_market">Couldn\'t launch MarketPlace app</string>
+
+</resources>

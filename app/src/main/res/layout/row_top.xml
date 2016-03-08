@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/border_top"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/top_icon"
+        style="@style/TopIcon"
+        android:layout_margin="8dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/top_name"
+        style="@style/TopFont"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/top_icon"
+        android:text="No info yet" />
+
+    <TextView
+        android:id="@+id/top_time"
+        style="@style/TopTimeFont"
+        android:layout_below="@+id/top_name"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/top_icon"
+        android:text="No info yet" />
+</RelativeLayout>

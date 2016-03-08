@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/installed_spinner_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <ListView
+        android:id="@+id/installed_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/installed_spinner_sort"
+        android:layout_above="@+id/installed_cb_include_system"
+        tools:listitem="@layout/row_installed" />
+
+    <CheckBox
+        android:id="@+id/installed_cb_include_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        android:text="@string/installed_include_system"
+        android:textColor="@color/blue"/>
+
+    <ProgressBar
+        android:id="@+id/installed_progress_bar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

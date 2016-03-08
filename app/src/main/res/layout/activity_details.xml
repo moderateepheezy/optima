@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/details_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/details_image"
+        android:text="Title"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/details_install_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/details_image"
+        android:text="Installed:"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/details_install_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/details_install_date_label"
+        android:layout_toRightOf="@+id/details_install_date_label"
+        android:text="01-01-2000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_packagename_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_image"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Package name:"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/details_packagename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_packagename_label"
+        android:layout_marginLeft="12dp"
+        android:text="test_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_souredir_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_packagename_label"
+        android:layout_below="@+id/details_packagename"
+        android:layout_marginTop="10dp"
+        android:text="Source directory:"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/details_sourcedir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_packagename_label"
+        android:layout_below="@+id/details_souredir_label"
+        android:scrollHorizontally="true"
+        android:text="test_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_datadir_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_packagename_label"
+        android:layout_below="@+id/details_sourcedir"
+        android:layout_marginTop="10dp"
+        android:text="Data directory:"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/details_datadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_packagename_label"
+        android:layout_below="@+id/details_datadir_label"
+        android:scrollHorizontally="true"
+        android:text="test_text"
+        android:textSize="16sp" />
+
+</RelativeLayout>
