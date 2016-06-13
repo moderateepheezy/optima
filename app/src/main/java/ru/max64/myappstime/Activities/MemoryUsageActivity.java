@@ -3,7 +3,7 @@ package ru.max64.myappstime.Activities;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
-import ru.max64.myappstime.Fragment.MemoryUsageFragment;
+import ru.max64.myappstime.Fragmentx.MemoryUsageFragment;
 import ru.max64.myappstime.R;
 
 

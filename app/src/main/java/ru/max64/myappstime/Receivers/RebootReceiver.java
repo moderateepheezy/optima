@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import ru.max64.myappstime.Service.CheckForegroundAppService;
+import ru.max64.myappstime.service.CheckForegroundAppService;
 
 
 /**

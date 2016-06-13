@@ -12,9 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ru.max64.myappstime.Fragment.AppStatisticsFragment;
-import ru.max64.myappstime.Fragment.MemoryUsageFragment;
-import ru.max64.myappstime.Fragment.UsagePatternFragment;
+import ru.max64.myappstime.Fragmentx.AppStatisticsFragment;
+import ru.max64.myappstime.Fragmentx.AppsFragment;
+import ru.max64.myappstime.Fragmentx.MemoryUsageFragment;
+import ru.max64.myappstime.Fragmentx.PhoneFactFragment;
+import ru.max64.myappstime.Fragmentx.UsagePatternFragment;
 import ru.max64.myappstime.R;
 import ru.max64.myappstime.fragment.InstalledFragment;
 import ru.max64.myappstime.fragment.StatsFragment;
@@ -26,15 +28,17 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter
     private static final int FRAGMENT_POSITION_TOP = 0;
     private static final int FRAGMENT_POSITION_STATS = 1;
     private static final int FRAGMENT_POSITION_INSTALLED = 2;
-    private static final int FRAGMENT_APP_USAGE = 3;
-    private static final int FRAGMENT_SHOW_MOST_USED = 4;
-    private static final int FRAGMENT_SHOW_APP_NOT_USED = 5;
-    private static final int FRAGMENT_SHOW_MEMORY_USAGE = 6;
-    private static final int PAGE_COUNT = 7;
+    private static final int FRAGMENT_ALL_W = 3;
+    private static final int FRAGMENT_APP_USAGE = 4;
+    private static final int FRAGMENT_SHOW_MOST_USED = 5;
+    private static final int FRAGMENT_SHOW_APP_NOT_USED = 6;
+    private static final int FRAGMENT_SHOW_MEMORY_USAGE = 7;
+
+    private static final int PAGE_COUNT = 8;
 
     private Context context;
     private Map<Integer, Fragment> tabs = new HashMap<>();
-    private List<String> tabTitles = new ArrayList<>(3);
+    private List<String> tabTitles = new ArrayList<>();
 
     public MyFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
@@ -43,6 +47,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter
         tabTitles.add(context.getResources().getString(R.string.tab_top));
         tabTitles.add(context.getResources().getString(R.string.tab_stats));
         tabTitles.add(context.getResources().getString(R.string.tab_installed));
+        tabTitles.add("CPU USAGE");
         tabTitles.add("APP USAGE");
         tabTitles.add("MUST USED APP");
         tabTitles.add("APP NOT USED");
@@ -55,6 +60,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter
         tabs.put(FRAGMENT_SHOW_MOST_USED, new UsagePatternFragment());
         tabs.put(FRAGMENT_SHOW_APP_NOT_USED, new UsagePatternFragment());
         tabs.put(FRAGMENT_SHOW_MEMORY_USAGE, new MemoryUsageFragment());
+        tabs.put(FRAGMENT_ALL_W, new AppsFragment());
     }
 
     @Override

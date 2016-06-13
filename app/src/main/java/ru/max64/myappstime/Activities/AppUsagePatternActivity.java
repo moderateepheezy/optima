@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 
-import ru.max64.myappstime.Fragment.UsagePatternFragment;
+import ru.max64.myappstime.Fragmentx.UsagePatternFragment;
 import ru.max64.myappstime.R;
 import ru.max64.myappstime.Utilities.Constants;
 

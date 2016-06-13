@@ -1,4 +1,4 @@
-package ru.max64.myappstime.Fragment;
+package ru.max64.myappstime.Fragmentx;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

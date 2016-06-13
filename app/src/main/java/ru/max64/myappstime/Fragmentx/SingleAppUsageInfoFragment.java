@@ -1,4 +1,4 @@
-package ru.max64.myappstime.Fragment;
+package ru.max64.myappstime.Fragmentx;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

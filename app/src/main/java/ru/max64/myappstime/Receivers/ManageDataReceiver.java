@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.v4.content.WakefulBroadcastReceiver;
 import android.util.Log;
 
-import ru.max64.myappstime.Service.ManageDataIntentService;
+import ru.max64.myappstime.service.ManageDataIntentService;
 
 
 /**

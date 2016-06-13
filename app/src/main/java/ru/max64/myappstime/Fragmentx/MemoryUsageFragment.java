@@ -1,4 +1,4 @@
-package ru.max64.myappstime.Fragment;
+package ru.max64.myappstime.Fragmentx;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import de.greenrobot.event.EventBus;
 import ru.max64.myappstime.Data.ProcessData;
 import ru.max64.myappstime.Event.ProcessInfoEvent;
 import ru.max64.myappstime.R;
-import ru.max64.myappstime.Service.ProcessDataUpdateService;
+import ru.max64.myappstime.service.ProcessDataUpdateService;
 import ru.max64.myappstime.adapter.ProcessAdapter;
 
 /**

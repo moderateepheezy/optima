@@ -28,7 +28,7 @@ import java.util.List;
 
 import ru.max64.myappstime.Data.AppUsageFrequencyTableItem;
 import ru.max64.myappstime.Database.Tables.AppUsageFrequencyTable;
-import ru.max64.myappstime.Service.CheckForegroundAppService;
+import ru.max64.myappstime.service.CheckForegroundAppService;
 
 /**
  * Created by aditya on 01/07/15.
